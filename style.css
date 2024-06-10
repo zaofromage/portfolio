@@ -1,0 +1,167 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+body > img {
+    width: 20vw;
+    height: auto;
+    border-radius: 50%;
+    border: solid black 3px;
+}
+
+aside {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside > img {
+    width: 100vw;
+    height: 100vh;
+}
+
+aside > p {
+    font-size: 25px;
+    transition: 0.5s;
+    margin: 0;
+    padding: 25px;
+}
+
+#top > p::after {
+    content: url('images/v_arrow.png');
+    display: flex;
+    justify-content: center;
+}
+
+#top {
+    top:-100vh;
+}
+
+#top > p:hover {
+    transform: translateY(20px);
+}
+
+#bottom > p::before {
+    content: url('images/v_arrow.png');
+    transform: rotate(180deg);
+    display: flex;
+    justify-content: center;
+}
+
+#bottom {
+    bottom: -100vh;
+}
+
+#bottom > p:hover {
+    transform: translateY(-20px);
+}
+
+#left > p::after {
+    content: url('images/v_arrow.png');
+    display: inline-block;
+    transform: rotate(-90deg) translateX(-10px);
+}
+
+#left {
+    left: -100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+#left > p:hover {
+    transform: translateX(20px);
+}
+
+#right > p::before {
+    content: url('images/v_arrow.png');
+    display: inline-block;
+    transform: rotate(90deg) translateX(10px);
+}
+
+#right {
+    right: -100vw;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#right > p:hover {
+    transform: translateX(-20px);
+}
+
+@keyframes slideInFromTheTop {
+    from {
+        transform: translateY(0vh);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes slideOutFromTheTop {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(0vh);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+@keyframes slideOutFromBottom {
+    from {
+        transform: translateY(-100vh);
+    }
+    to {
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(0vw);
+    }
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes slideOutFromLeft {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(0vw);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(0vw);
+    }
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes slideOutFromRight {
+    from {
+        transform: translateX(-100vw);
+    }
+    to {
+        transform: translateX(0vw);
+    }
+}
