@@ -2,16 +2,57 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-image: linear-gradient(
+        to bottom,
+        rgb(255 255 0 / 50%),
+        rgb(0 0 255 / 50%)
+      );
 }
 
-body > img {
+span {
+    font-weight: bold;
+    font-size: 45px;
+}
+
+#moi {
     width: 20vw;
     height: auto;
     border-radius: 50%;
     border: solid black 3px;
+    transition : 0.5s;
+}
+
+#moi:hover {
+    border-radius: 10px;
+}
+
+#github {
+    width: 100px;
+    height: 30px;
+    border-radius: 0;
+    border: solid black 3px;
+    background-color: whitesmoke;
+    transition: 0.5s;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+
+#github:hover {
+    border-color: white;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+#github > img {
+    width: 20%;
 }
 
 aside {
