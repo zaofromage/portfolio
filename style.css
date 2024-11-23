@@ -1,11 +1,5 @@
 body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
     background-image: linear-gradient(
         to bottom,
         rgb(255 255 0 / 50%),
@@ -13,9 +7,24 @@ body {
       );
 }
 
-span {
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+header > * {
+    margin-bottom: 10px;
+}
+
+#nom {
     font-weight: bold;
-    font-size: 45px;
+}
+
+#nom, #titre {
+    font-size: 40px;
 }
 
 #moi {
@@ -49,160 +58,96 @@ span {
     background-color: black;
     color: white;
     font-weight: bold;
+}   
+
+section > h3 {
+    text-align: center;
 }
 
-#github > img {
-    width: 20%;
+#about {
+    text-align: center;
 }
 
-aside {
-    position: absolute;
+#projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.project {
+    background: linear-gradient(
+        rgb(255 0 0 / 50%),
+        rgb(0 255 0 / 50%)
+      );
+    border-radius: 10px;
+    border: solid black 3px;
+    padding-inline: 10px;
+    max-width: 60%;
+    transition: 0.5s;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-aside > img {
-    width: 100vw;
-    height: 100vh;
+.title {
+    font-weight: bold;
 }
 
-aside > p {
-    font-size: 25px;
-    transition: 0.5s;
-    margin: 0;
-    padding: 25px;
+.project > img, .desc {
+    height: 50%;
+    width: auto;
+    max-width: 90%;
+    text-align: center;
 }
 
-#top > p::after {
-    content: url('images/v_arrow.png');
-    display: flex;
-    justify-content: center;
+.project > img {
+    border-radius: 5px;
+    border: solid white 3px;
 }
 
-#top {
-    top:-100vh;
+.left {
+    align-self: flex-start;
 }
 
-#top > p:hover {
-    transform: translateY(20px);
+.left:hover {
+    transform: scale(1.1) translate(10%);
 }
 
-#bottom > p::before {
-    content: url('images/v_arrow.png');
-    transform: rotate(180deg);
-    display: flex;
-    justify-content: center;
+.right {
+    align-self: flex-end;
 }
 
-#bottom {
-    bottom: -100vh;
+.right:hover {
+    transform: scale(1.1) translate(-10%);
 }
 
-#bottom > p:hover {
-    transform: translateY(-20px);
-}
+@media (max-width: 900px) {
 
-#left > p::after {
-    content: url('images/v_arrow.png');
-    display: inline-block;
-    transform: rotate(-90deg) translateX(-10px);
-}
-
-#left {
-    left: -100vw;
-    display: flex;
-    flex-direction: row;
-}
-
-#left > p:hover {
-    transform: translateX(20px);
-}
-
-#right > p::before {
-    content: url('images/v_arrow.png');
-    display: inline-block;
-    transform: rotate(90deg) translateX(10px);
-}
-
-#right {
-    right: -100vw;
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-#right > p:hover {
-    transform: translateX(-20px);
-}
-
-@keyframes slideInFromTheTop {
-    from {
-        transform: translateY(0vh);
+    #moi {
+        width: 25vw;
     }
-    to {
-        transform: translateY(100vh);
+
+    #nom, #titre {
+        font-size: 25px;
     }
 }
 
-@keyframes slideOutFromTheTop {
-    from {
-        transform: translateY(100vh);
+@media (max-width : 500px) {
+
+    #moi {
+        width: 50vw;
     }
-    to {
-        transform: translateY(0vh);
+
+    #nom {
+       font-size: 20px;
+    }
+
+    #titre {
+        font-size: 15px;
+    }
+
+    .project {
+        max-width: 80%;
     }
 }
 
-@keyframes slideInFromBottom {
-    from {
-        transform: translateY(0vh);
-    }
-    to {
-        transform: translateY(-100vh);
-    }
-}
 
-@keyframes slideOutFromBottom {
-    from {
-        transform: translateY(-100vh);
-    }
-    to {
-        transform: translateY(0vh);
-    }
-}
-
-@keyframes slideInFromLeft {
-    from {
-        transform: translateX(0vw);
-    }
-    to {
-        transform: translateX(100vw);
-    }
-}
-
-@keyframes slideOutFromLeft {
-    from {
-        transform: translateX(100vw);
-    }
-    to {
-        transform: translateX(0vw);
-    }
-}
-
-@keyframes slideInFromRight {
-    from {
-        transform: translateX(0vw);
-    }
-    to {
-        transform: translateX(-100vw);
-    }
-}
-
-@keyframes slideOutFromRight {
-    from {
-        transform: translateX(-100vw);
-    }
-    to {
-        transform: translateX(0vw);
-    }
-}

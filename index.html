@@ -4,106 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Zao Capdeville</title>
 </head>
 <body>
-    <img id="moi" src="images/moi.png" alt="moi">
-    <span>Zao Capdeville</span>
-    <a href="https://github.com/zaofromage" id="github">Github</a>
-    <aside id="top">
-        <img src="retex/IA Jeu de plateau.png" alt="" class="retex">
-        <p>IA Jeu de Plateau</p>
-    </aside>
-
-    <aside id="bottom">
-        <p>Mise en place d'un réseau</p>
-        <img src="retex/Mise en place d'un réseau.png" alt="" class="retex">
-    </aside>
-    
-    <aside id="left">
-        <img src="retex/Programmation d'un robot.png" alt="" class="retex">
-        <p>Programmation d'un robot</p>
-    </aside>
-
-    <aside id="right">
-        <img src="retex/Projet Pixel War.png" alt="" class="retex">
-        <p>Projet Pixel War</p>
-    </aside>
-
-    <script>
-        let retex = false;
-        //top
-        document.getElementById('top').addEventListener('click', () => {
-            console.log(retex);
-            if (!retex) {
-                document.getElementById('top').style.animation = "1s ease-in forwards slideInFromTheTop";
-                document.getElementById('top').style.zIndex = 999;
-                document.querySelectorAll('aside:not(#top)').forEach((c) => {
-                    c.style.zIndex = 1;
-                })
-                retex = true;
-            } else if (retex) {
-                document.getElementById('top').style.animation = "1s ease-in forwards slideOutFromTheTop";
-                document.querySelectorAll('aside:not(#top)').forEach((c) => {
-                    c.style.zIndex = 1;
-                })
-                retex = false;
-            }
-        })
-        //bottom
-        document.getElementById('bottom').addEventListener('click', () => {
-            console.log(retex);
-            if (!retex) {
-                document.getElementById('bottom').style.animation = "1s ease-in forwards slideInFromBottom";
-                document.getElementById('bottom').style.zIndex = 999;
-                document.querySelectorAll('aside:not(#bottom)').forEach((c) => {
-                    c.style.zIndex = 1;
-                })
-                retex = true;
-            } else if (retex) {
-                document.getElementById('bottom').style.animation = "1s ease-in forwards slideOutFromBottom";
-                document.querySelectorAll('aside:not(#bottom)').forEach((c) => {
-                    c.style.zIndex = 1;
-                })
-                retex = false;
-            }
-        })
-        //left
-        document.getElementById('left').addEventListener('click', () => {
-            console.log(retex);
-            if (!retex) {
-                document.getElementById('left').style.animation = "1s ease-in forwards slideInFromLeft";
-                document.getElementById('left').style.zIndex = 999;
-                document.querySelectorAll('aside:not(#left)').forEach((c) => {
-                    c.style.zIndex = 1;
-                })
-                retex = true;
-            } else if (retex) {
-                document.getElementById('left').style.animation = "1s ease-in forwards slideOutFromLeft";
-                document.querySelectorAll('aside:not(#left)').forEach((c) => {
-                    c.style.zIndex = 1;
-                })
-                retex = false;
-            }
-        })
-        //right
-        document.getElementById('right').addEventListener('click', () => {
-            console.log(retex);
-            if (!retex) {
-                document.getElementById('right').style.animation = "1s ease-in forwards slideInFromRight";
-                document.getElementById('right').style.zIndex = 999;
-                document.querySelectorAll('aside:not(#right)').forEach((c) => {
-                    c.style.zIndex = 1;
-                })
-                retex = true;
-            } else if (retex) {
-                document.getElementById('right').style.animation = "1s ease-in forwards slideOutFromRight";
-                document.querySelectorAll('aside:not(#right)').forEach((c) => {
-                    c.style.zIndex = 1;
-                })
-                retex = false;
-            }
-        })
-    </script>
+    <header>
+        <img id="moi" src="images/moi.png" alt="moi">
+        <span id="nom">Zao Capdeville</span>
+        <span id="titre">Développeur Logiciel / Web / Jeu-Video</span>
+        <a href="https://github.com/zaofromage" id="github">Github</a>
+    </header>
+    <main>
+        <section id="about">
+            <h3>À propos</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tenetur, ipsum assumenda veritatis repellat quibusdam porro, itaque nisi odit quas laudantium illum dignissimos omnis! Assumenda corporis saepe aliquam facere impedit.
+            </p>
+        </section>
+        <section id="projects">
+            <h3>Projets</h3>
+            <div class="project left">
+                <p class="title">Towa</p>
+                <img src="images/IA_towa.png" alt="">
+                <p class="desc">
+                    Un jeu de plateau dans lequel il faut poser des plus de tours que 
+                    son adversaire pour gagner la partie.
+                    Réalisation des règles du jeu et d'une IA capable de jouer contre d'autres
+                    IAs.
+                </p>
+                <div class="techno">
+                    <span></span>
+                </div>
+            </div>
+            <div class="project right">
+                <p>FunOfTanks</p>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
