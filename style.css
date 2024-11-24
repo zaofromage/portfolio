@@ -1,5 +1,6 @@
 body {
     overflow-x: hidden;
+    font-family: sans-serif;
     background-image: linear-gradient(
         to bottom,
         rgb(255 255 0 / 50%),
@@ -12,7 +13,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 header > * {
@@ -60,12 +61,42 @@ header > * {
     font-weight: bold;
 }   
 
-section > h3 {
+h3 {
     text-align: center;
 }
 
 #about {
     text-align: center;
+}
+
+#skills {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 10%;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 2px black;
+    transition: 0.5s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+.skill > img {
+    width:90%;
+    margin-bottom: 5px;
 }
 
 #projects {
@@ -86,6 +117,10 @@ section > h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color:black;
+    text-decoration: none;
+    margin-bottom: 5%;
+    max-height: 75vh;
 }
 
 .title {
@@ -95,7 +130,7 @@ section > h3 {
 .project > img, .desc {
     height: 50%;
     width: auto;
-    max-width: 90%;
+    max-width: 75%;
     text-align: center;
 }
 
@@ -120,6 +155,34 @@ section > h3 {
     transform: scale(1.1) translate(-10%);
 }
 
+.technos {
+    display:flex;
+    margin-bottom: 3%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.techno {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    border-radius: 7px;
+    border: solid magenta 3px;
+    max-width:20%;
+    padding: 5px;
+}
+
+.techno > img {
+    width:20%;
+    margin-right: 5%;
+}
+
+.techno > span {
+    overflow: hidden;
+}
+
 @media (max-width: 900px) {
 
     #moi {
@@ -128,6 +191,14 @@ section > h3 {
 
     #nom, #titre {
         font-size: 25px;
+    }
+
+    .techno > img {
+        width:30%;
+    }
+
+    .project {
+        max-height: none;
     }
 }
 
@@ -147,6 +218,10 @@ section > h3 {
 
     .project {
         max-width: 80%;
+    }
+
+    .techno > span {
+        font-size: 10px;
     }
 }
 
