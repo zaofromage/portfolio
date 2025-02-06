@@ -106,10 +106,6 @@ h3 {
 }
 
 .project {
-    background: linear-gradient(
-        rgb(255 0 0 / 50%),
-        rgb(0 255 0 / 50%)
-      );
     border-radius: 10px;
     border: solid black 3px;
     padding-inline: 10px;
