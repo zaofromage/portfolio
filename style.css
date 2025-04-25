@@ -43,7 +43,7 @@ header > * {
 #github {
     width: 100px;
     height: 30px;
-    border-radius: 0;
+    border-radius: 5px;
     border: solid black 3px;
     background-color: whitesmoke;
     transition: 0.5s;
