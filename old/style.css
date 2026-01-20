@@ -1,0 +1,225 @@
+body {
+    overflow-x: hidden;
+    font-family: sans-serif;
+    background-image: linear-gradient(
+        to bottom,
+        rgb(255 255 0 / 50%),
+        rgb(0 0 255 / 50%)
+      );
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+header > * {
+    margin-bottom: 10px;
+}
+
+#nom {
+    font-weight: bold;
+}
+
+#nom, #titre {
+    font-size: 40px;
+}
+
+#moi {
+    width: 20vw;
+    height: auto;
+    border-radius: 50%;
+    border: solid black 3px;
+    transition : 0.5s;
+}
+
+#moi:hover {
+    border-radius: 10px;
+}
+
+#github {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid black 3px;
+    background-color: whitesmoke;
+    transition: 0.5s;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+
+#github:hover {
+    border-color: white;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}   
+
+h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#about {
+    text-align: center;
+}
+
+#skills {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 10%;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 2px black;
+    transition: 0.5s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+.skill > img {
+    width:90%;
+    margin-bottom: 5px;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.project {
+    border-radius: 10px;
+    border: solid black 3px;
+    padding-inline: 10px;
+    max-width: 60%;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:black;
+    text-decoration: none;
+    margin-bottom: 5%;
+    max-height: 75vh;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.project > img, .desc {
+    height: 50%;
+    width: auto;
+    max-width: 75%;
+    text-align: center;
+}
+
+.project > img {
+    border-radius: 5px;
+    border: solid white 3px;
+}
+
+.left {
+    align-self: flex-start;
+}
+
+.left:hover {
+    transform: scale(1.1) translate(10%);
+}
+
+.right {
+    align-self: flex-end;
+}
+
+.right:hover {
+    transform: scale(1.1) translate(-10%);
+}
+
+.technos {
+    display:flex;
+    margin-bottom: 3%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.techno {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    border-radius: 7px;
+    border: solid magenta 3px;
+    max-width:20%;
+    padding: 5px;
+}
+
+.techno > img {
+    width:20%;
+    margin-right: 5%;
+}
+
+.techno > span {
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+
+    #moi {
+        width: 25vw;
+    }
+
+    #nom, #titre {
+        font-size: 25px;
+    }
+
+    .techno > img {
+        width:30%;
+    }
+
+    .project {
+        max-height: none;
+    }
+}
+
+@media (max-width : 500px) {
+
+    #moi {
+        width: 50vw;
+    }
+
+    #nom {
+       font-size: 20px;
+    }
+
+    #titre {
+        font-size: 15px;
+    }
+
+    .project {
+        max-width: 80%;
+    }
+
+    .techno > span {
+        font-size: 10px;
+    }
+}
+
+

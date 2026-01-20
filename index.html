@@ -3,28 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Zao Capdeville</title>
+    <title>Zao Capdeville - Développeur Logiciel</title>
+    <meta name="description" content="Portfolio de Zao Capdeville, développeur passionné par le développement logiciel, web et jeu vidéo.">
 </head>
 <body>
+    <!-- Background Effects -->
+    <div class="background-grid"></div>
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+
     <header>
-        <img id="moi" src="images/moi.png" alt="moi">
-        <span id="nom">Zao Capdeville</span>
-        <span id="titre">Développeur Logiciel / Web / Jeu-Video</span>
-        <a href="https://github.com/zaofromage" id="github">Github</a>
+        <div class="terminal-line">$ whoami</div>
+        <div class="profile-container">
+            <div class="profile-frame">
+                <img id="moi" src="images/moi.png" alt="Photo de profil de Zao Capdeville">
+                <div class="profile-glow"></div>
+            </div>
+            <div class="profile-status">
+                <span class="status-dot"></span>
+                <span class="status-text">Available for work</span>
+            </div>
+        </div>
+        <h1 id="nom">
+            <span class="nom-line">Zao</span>
+            <span class="nom-line">Capdeville</span>
+        </h1>
+        <div class="titre-container">
+            <span class="terminal-prompt">&gt;_</span>
+            <span id="titre" class="typewriter">Développeur Logiciel / Web / Jeu-Video</span>
+        </div>
+        <div class="header-actions">
+            <a href="https://github.com/zaofromage" id="github" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span>GitHub</span>
+            </a>
+            <button id="theme-toggle" aria-label="Basculer le thème sombre/clair">
+                <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="5" fill="currentColor"/>
+                    <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
+                    <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/>
+                    <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/>
+                    <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" style="display: none;">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>
+                </svg>
+            </button>
+        </div>
     </header>
     <main>
         <section id="about">
-            <h3>À propos</h3>
-            <p>
-                Game Dev en devenir, je suis passioné par l'informatique en général.</br>
-                En effet, je m'amuse tout autant à faire un site web,
-                interagir avec le système ou programmer un jeu vidéo.</br>
-                Mes langages préferés sont Java et C++;
-            </p>
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2>À propos</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-title">bio.txt</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="terminal-text">
+                            <span class="comment">// Game Dev en devenir</span><br>
+                            Game Dev en devenir, je suis passioné par l'informatique en général.<br>
+                            En effet, je m'amuse tout autant à faire un site web,
+                            interagir avec le système ou programmer un jeu vidéo.<br>
+                            <span class="keyword">const</span> langagesPréférés = [<span class="string">"Java"</span>, <span class="string">"C++"</span>];
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <h3>Compétences</h3>
-        <section id="skills">
+
+        <section id="skills-section">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2>Compétences</h2>
+                <div class="section-line"></div>
+            </div>
+            <section id="skills">
             <div class="skill">
                 <img src="images/java_withouttext.webp" alt="java">
                 <span>Java</span>
@@ -78,11 +150,31 @@
 		<span>MySQL</span>
 	    </div>
         </section>
+        </section>
+
         <section id="projects">
-            <h3>Projets</h3>
-            <a class="project right" href="" target="_blank">
-                <p class="title">Tournoi Football Robot</p>
-                <img src="images/tfr-comp.png" alt="tournoi-football-robot">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2>Projets</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="game">Jeux</button>
+                <button class="filter-btn" data-filter="ai">IA</button>
+                <button class="filter-btn" data-filter="cpp">C++</button>
+            </div>
+            <a class="project right" href="" target="_blank" data-categories="web,php" data-project-id="tfr">
+                <div class="project-number">01</div>
+                <div class="project-header">
+                    <h3 class="title">Tournoi Football Robot</h3>
+                    <div class="project-arrow">→</div>
+                </div>
+                <div class="project-image-wrapper">
+                    <img src="images/tfr-comp.png" alt="tournoi-football-robot">
+                    <div class="image-overlay"></div>
+                </div>
                 <p class="desc">
                     TFR est une application en Symfony pour la création et la gestion de tournois de football robotique en équipe, un projet en equipe dans lequel nous avons utilisé la méthodologie scrum.
                 </p>
@@ -113,9 +205,16 @@
                     </div>
                 </div>
             </a>
-            <a class="project left" href="retex/IA Jeu de plateau.pdf" target="_blank">
-                <p class="title">Towa</p>
-                <img src="images/IA_towa.png" alt="Towa">
+            <a class="project left" href="retex/IA Jeu de plateau.pdf" target="_blank" data-categories="game,ai" data-project-id="towa">
+                <div class="project-number">02</div>
+                <div class="project-header">
+                    <h3 class="title">Towa</h3>
+                    <div class="project-arrow">→</div>
+                </div>
+                <div class="project-image-wrapper">
+                    <img src="images/IA_towa.png" alt="Towa">
+                    <div class="image-overlay"></div>
+                </div>
                 <p class="desc">
                     Un jeu de plateau dans lequel il faut poser plus de tours que 
                     son adversaire pour gagner la partie.</br>
@@ -133,9 +232,16 @@
                     </div>
                 </div>
             </a>
-            <a class="project right" href="https://github.com/zaofromage/FunOfTanks" target="_blank">
-                <p class="title">Fun of Tanks</p>
-                <img src="images/funoftanks.png" alt="funoftanks">
+            <a class="project right" href="https://github.com/zaofromage/FunOfTanks" target="_blank" data-categories="game" data-project-id="fot">
+                <div class="project-number">03</div>
+                <div class="project-header">
+                    <h3 class="title">Fun of Tanks</h3>
+                    <div class="project-arrow">→</div>
+                </div>
+                <div class="project-image-wrapper">
+                    <img src="images/funoftanks.png" alt="funoftanks">
+                    <div class="image-overlay"></div>
+                </div>
                 <p class="desc">
                     Fun of Tanks est un jeu multijoueur compétitif où les joueurs contrôlent des tanks dans une arène, en utilisant des tirs et des pouvoirs pour détruire leurs adversaires. Doté d'effets visuels immersifs, comme des explosions et des traînées de fumée, il offre une expérience dynamique et captivante. Conçu avec un système multithread avancé, le jeu garantit des parties fluides en réseau, avec un joueur hôte servant de serveur.
                 </p>
@@ -154,9 +260,16 @@
                     </div>
                 </div>
             </a>
-            <a class="project left" href="https://github.com/zaofromage/chess" target="_blank">
-                <p class="title">Chess</p>
-                <img src="images/chess.png" alt="chess">
+            <a class="project left" href="https://github.com/zaofromage/chess" target="_blank" data-categories="web" data-project-id="chess">
+                <div class="project-number">04</div>
+                <div class="project-header">
+                    <h3 class="title">Chess</h3>
+                    <div class="project-arrow">→</div>
+                </div>
+                <div class="project-image-wrapper">
+                    <img src="images/chess.png" alt="chess">
+                    <div class="image-overlay"></div>
+                </div>
                 <p class="desc">
                     Jeu d'échecs en ligne en temps réel avec un système de login,
                     de matchmaking et un simple base de données json.
@@ -180,9 +293,16 @@
                     </div>
                 </div>
             </a>
-            <a class="project right" href="https://github.com/zaofromage/Pool" target="_blank">
-                <p class="title">Pool simulation</p>
-                <img src="images/pool_video.gif" alt="funoftanks">
+            <a class="project right" href="https://github.com/zaofromage/Pool" target="_blank" data-categories="cpp,game" data-project-id="pool">
+                <div class="project-number">05</div>
+                <div class="project-header">
+                    <h3 class="title">Pool simulation</h3>
+                    <div class="project-arrow">→</div>
+                </div>
+                <div class="project-image-wrapper">
+                    <img src="images/pool_video.gif" alt="funoftanks">
+                    <div class="image-overlay"></div>
+                </div>
                 <p class="desc">
                     Simulation de collision élastique 2D qui représente des boules de
                     billard qui s'entrechoque.</br>
@@ -207,5 +327,25 @@
             </a>
         </section>
     </main>
+
+    <!-- Modal pour les détails des projets -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fermer le modal">&times;</button>
+            <div class="modal-body">
+                <img class="modal-image" src="" alt="">
+                <div class="modal-info">
+                    <h2 class="modal-title"></h2>
+                    <p class="modal-description"></p>
+                    <div class="modal-technos"></div>
+                    <div class="modal-links">
+                        <a class="modal-link" href="" target="_blank" rel="noopener">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
